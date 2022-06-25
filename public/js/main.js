@@ -1,31 +1,3 @@
-//input box handle
-const input = document.querySelector("#pass");
-const error = document.querySelector('#error');
-const button = document.querySelector('#btn');
-const roompage = document.querySelector('.roompage');
-const mainpage = document.querySelector('.boxcontainer');
-
-
-//play naat
-const naat = new Audio('../naat.mp3');
-window.addEventListener('click',() => naat.play());
-//handle click event
-const roomPass = "sawira143";
-button.addEventListener("click",() => {
-  const Inputpass = input.value;
-  if(Inputpass == '' || Inputpass == ' ' ){
-    return error.innerText = "please enter password";
-  }else if(Inputpass !== roomPass){
-    return error.innerText = "incorrect password";
-  }else if(Inputpass == roomPass){
-    mainpage.classList.add('hidden');
-    roompage.classList.remove('hidden');
-    naat.pause();
-  }
-});
-
-  
-
 const socket = io('https://my-socket-server-io.herokuapp.com/');
 
 const form = document.getElementById('send-container');

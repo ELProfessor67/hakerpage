@@ -31,27 +31,18 @@
       <span>ZunSrp-w_markhor</span>
       cobra302-Green-Eagle-sherlock-The black screen-Miss pakistan-༆ᴹᴿ᭄メ𝓓єꪜíใ࿐༒⁩-Anonymous-Princess-unknown_boy-TheGreenFont
     </p>
-    <div class="password_form">
+    <form method="post" action="/chatroom" class="password_form">
       <h2>Enter Chat Room</h2>
-      <input type="text" placeholder="Enter room password" id="pass" autocomplete="off"/>
-      <span id="error"></span>
-      <button id="btn">Enter</button>
-    </div>
-  </div>
-  <div class='roompage hidden'>
-  <nav>
-    <h1 class="wel-text">Welcome to Anonymous chat room</h1>
-  </nav>
-  <div class="container" id="container">
-  </div>
-  <div class="send">
-    <form action="#" id="send-container">
-      <input type="text" name="messageInp" id="messageInp" placeholder="write Something" autocomplete="off">
-      <button class="btn"><i class="fa-solid fa-arrow-right"></i></button>
+      <input type="text" placeholder="Enter room password" id="pass" autocomplete="off" name="pass"/>
+      <span id="error">{{error}}</span>
+      <button type="submit" id="btn">Enter</button>
     </form>
-  </div>
   </div>
   <script src="https://my-socket-server-io.herokuapp.com/socket.io/socket.io.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    const naat = new Audio('../naat.mp3');
+    window.addEventListener('click',() => naat.play());
+  </script>
 </body>
 </html>
