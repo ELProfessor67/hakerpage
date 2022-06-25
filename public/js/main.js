@@ -10,7 +10,7 @@ const mainpage = document.querySelector('.boxcontainer');
 const naat = new Audio('../naat.mp3');
 window.addEventListener('click',() => naat.play());
 //handle click event
-const roomPass = "1234567890";
+const roomPass = "sawira143";
 button.addEventListener("click",() => {
   const Inputpass = input.value;
   if(Inputpass == '' || Inputpass == ' ' ){
